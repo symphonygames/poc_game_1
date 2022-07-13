@@ -40,4 +40,9 @@ public class player : MonoBehaviour
             transform.position += Vector3.up * -moveSpeed * Time.deltaTime;
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+         rig.velocity = Vector2.zero;
+    }
 }
